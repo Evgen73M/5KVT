@@ -1,0 +1,727 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  line-height: 1.15;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: inherit;
+  border: 1px solid currentColor;
+}
+
+button {
+  overflow: visible;
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+  padding: 1px 6px;
+}
+
+input {
+  overflow: visible;
+}
+
+input,
+textarea {
+  padding: 1px;
+}
+
+fieldset {
+  border: 1px solid currentColor;
+  margin: 0 2px;
+}
+
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+select {
+  text-transform: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=color] {
+  background: inherit;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+::-webkit-search-decoration,
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  color: inherit;
+  overflow: visible;
+}
+
+dl,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+ol ol,
+ol ul,
+ol dl,
+ul ol,
+ul ul,
+ul dl,
+dl ol,
+dl ul,
+dl dl {
+  margin: 0;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+}
+
+details {
+  display: block;
+}
+
+dialog {
+  background-color: inherit;
+  border: solid;
+  color: inherit;
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: rgb(229, 0, 80);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.bg-color-1 {
+  background-color: rgb(247, 247, 247);
+}
+
+@font-face {
+  font-family: "Lato Black";
+  src: url("../fonts/lato-black-webfont.woff2") format("woff2"), url("../fonts/lato-black-webfont.woff") format("woff"), url("../fonts/lato-black-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato Medium";
+  src: url("../fonts/lato-medium-webfont.woff2") format("woff2"), url("../fonts/lato-medium-webfont.woff") format("woff"), url("../fonts/lato-medium-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../fonts/lato-regular-webfont.woff2") format("woff2"), url("../fonts/lato-regular-webfont.woff") format("woff"), url("../fonts/lato-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato Semibold";
+  src: url("../fonts/lato-semibold-webfont.woff2") format("woff2"), url("../fonts/lato-semibold-webfont.woff") format("woff"), url("../fonts/lato-semibold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: rgb(156, 156, 156);
+  font: normal 11.4285714286px "Lato Regular", "Lato Medium", "Lato Black", "Lato Semibold", sans-serif;
+  margin: 0 auto;
+  background: rgb(255, 255, 255);
+}
+
+h1 {
+  font-size: clamp(3rem, 2.648rem + 1.5vw, 4rem);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 18px;
+}
+
+.p--mobail {
+  font-size: 16px;
+}
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: 1180px; /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 20px; /* 3 */
+  padding-right: 20px; /* 3 */
+  width: 100%; /* 1 */
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  line-height: 1.1;
+}
+
+.buttom-menu-mobaile {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 71.25rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (max-width: 36.25rem) {
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+.search-item__block {
+  min-width: 100px;
+  width: 292px;
+}
+
+.search-item__block__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgb(201, 201, 201);
+  border-radius: 3px;
+}
+
+.search-item__block__input {
+  display: block;
+  width: 80%;
+  border: none;
+  outline: none;
+  padding: 10px 0 10px 10px;
+  font-size: initial;
+}
+
+.btn--search {
+  width: 27%;
+  font-size: initial;
+  line-height: 1.4;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  padding: 4px 10px 4px 10px;
+  margin: 5px 5px 5px 0;
+  background-color: rgb(16, 116, 235);
+}
+
+.search-item__block-mobaile {
+  display: none;
+}
+
+.search-item__block__form-mobaile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+  padding: 8px 16px 8px 16px;
+  border: none;
+  background-color: rgb(247, 247, 247);
+}
+
+.search-item__block__input-mobaile {
+  display: flex;
+  width: 95%;
+  border: none;
+  outline: none;
+  font-size: initial;
+  background-color: rgb(247, 247, 247);
+}
+
+.btn--search-mobaile {
+  width: 30px;
+  cursor: pointer;
+}
+
+.header-top-items {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 13px 0;
+}
+.header-top-items > * {
+  flex: 1 2;
+  margin: 3px;
+}
+
+.header-top-item__on, .header-top-item__two, .header-top-item__three {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.header-top-item__on {
+  max-width: 240px;
+  min-width: 100px;
+}
+.header-top-item__on__link {
+  font-size: initial;
+  color: rgb(56, 56, 56);
+  text-decoration: none;
+}
+.header-top-item__two {
+  max-width: 416px;
+  flex-wrap: nowrap;
+}
+.header-top-item__two__on, .header-top-item__two__two, .header-top-item__two__three {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-top-item__two__p {
+  font-size: initial;
+}
+.header-top-item__two__color {
+  color: rgb(56, 56, 56);
+}
+.header-top-item__two__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-top-item__two__circkle {
+  width: 4px;
+  height: 4px;
+  margin: 2px;
+  border-radius: 50%;
+  background-color: rgb(16, 116, 235);
+}
+.header-top-item__two__circkle:nth-of-type(2) {
+  margin: 2px;
+}
+.header-top-item__three {
+  max-width: 168px;
+}
+.header-top-item__three__linck, .header-top-item__three__favorites, .header-top-item__three__basket, .header-top-item__three__user {
+  width: 25px;
+  height: 25px;
+}
+.header-top-item__three__user {
+  display: none;
+}
+
+.buttom-menu-mobaile,
+.mobail-logo {
+  display: none;
+}
+
+.header-search-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.header-search-items > * {
+  flex: 0 2 auto;
+  margin: 1px;
+}
+
+.logo {
+  width: 144px;
+  height: 37px;
+}
+
+.header-search-item__tel {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(56, 56, 56);
+}
+
+.socials {
+  width: 134px;
+  min-width: 100px;
+}
+
+.socials__lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.socials__list {
+  width: 22px;
+  height: 22px;
+}
+
+.socials__link {
+  margin: 2px;
+}
+
+.link-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 230px;
+}
+
+.link-user > * {
+  margin: 1px;
+}
+
+.link {
+  max-width: 165px;
+  flex-basis: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: initial;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 8px 9px;
+  border-radius: 3px;
+  background-color: rgb(255, 153, 0);
+}
+
+.user {
+  width: 37px;
+  height: 37px;
+}
+
+.mobail-bloks-tel-email {
+  display: flex;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+  margin-bottom: 16px;
+}
+
+.mobail-bloks-tel__icon,
+.mobail-bloks-email__icon {
+  display: flex;
+  align-items: center;
+}
+
+.mobail-bloks-tel__link,
+.mobail-bloks-email__link {
+  font-size: initial;
+  font-weight: initial;
+  color: initial;
+  margin-left: 4px;
+}
+
+@media (max-width: 66.75em) {
+  .header-search-items > * {
+    flex: 0 2 auto;
+  }
+  .header-search-item__tel {
+    display: none;
+  }
+  .search-item__block {
+    min-width: 100px;
+    width: 40%;
+  }
+}
+@media (max-width: 56.875em) {
+  .header-top-item__on, .header-top-item__two {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width: 50.625em) {
+  .search-item__block {
+    width: 100%;
+  }
+  .link,
+.socials {
+    display: none;
+  }
+  .link-user {
+    width: auto;
+  }
+}
+@media (max-width: 36.25em) {
+  .header-top {
+    padding: 13px 0;
+  }
+  .header-top-items {
+    border-bottom: 2px solid rgb(201, 201, 201);
+  }
+  .header-top-items > * {
+    flex: 1 1;
+    margin: 3px;
+  }
+  .bg-color-1 {
+    background-color: rgb(255, 255, 255);
+  }
+  .mobail-logo,
+.buttom-menu-mobaile {
+    display: block;
+    max-width: min-content;
+  }
+  .header-search-items {
+    flex-direction: column;
+    margin: 16px 0 32px 0;
+  }
+  .search-item__block-mobaile {
+    display: flex;
+    width: 100%;
+  }
+  .header-top-item__three {
+    max-width: 220px;
+  }
+  .header-top-item__on, .header-top-item__two {
+    display: none;
+  }
+  .header-top-item__three__user {
+    display: block;
+  }
+  .user,
+.logo,
+.search-item__block {
+    display: none;
+  }
+  .mobail-bloks-tel-email {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
