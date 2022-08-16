@@ -525,7 +525,7 @@ p {
 
 .cards-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(16.4375rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(13.4375rem, 1fr));
   grid-gap: 1.8rem;
 }
 
