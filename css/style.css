@@ -1049,7 +1049,7 @@ p {
 @media (max-width: 575.98px) {
   .cards-wrapper {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 0;
+    grid-gap: 0.9rem;
   }
 }
 
