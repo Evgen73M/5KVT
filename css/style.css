@@ -627,9 +627,39 @@ p {
   height: 25px;
 }
 
+.card__block-prace-icon--mobail {
+  display: inline-flex;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  padding: 14px;
+  margin-left: 8px;
+  border-bottom: none;
+  background-color: #1074eb;
+  transition: 250ms ease-in-out;
+}
+
+.card__block-prace-icon--mobail:hover {
+  background-color: #ff9900;
+}
+
+.card__block-prace-icon--mobail-svg {
+  width: 22px;
+  height: 22px;
+  fill: white;
+}
+
+.btn--basket__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .btn--basket {
   display: flex;
   align-items: center;
+  width: 100%;
   text-align: center;
   font-size: initial;
   font-weight: 600;
@@ -988,7 +1018,7 @@ p {
 @media (max-width: 48rem) {
   .product-title {
     justify-content: center;
-    margin         : 50px 0 32px 0;
+    margin: 50px 0 32px 0;
   }
   .product-title__h2 {
     font-size: 36px;
@@ -1020,7 +1050,7 @@ p {
   }
 
   .card__block-text {
-    min-height: 70px;
+    min-height: 60px;
     margin: 20px 0 10px 0;
   }
 
@@ -1033,24 +1063,40 @@ p {
 
   .card__p {
     font-size: 16px;
-    text-align: justify;
   }
 
   .card__block-prace-tag {
     font-size: 20px;
-    font-weight: 500;
     color: #383838;
+  }
+
+  .card__block-prace {
+    margin: 0 0 16px 0;
   }
 
   .card__block-prace-icon,
 .btn--basket-icon-basket {
     display: none;
   }
+
+  .btn--basket {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: initial;
+    font-weight: 600;
+    color: white;
+    padding: 16px 10px;
+  }
+
+  .card__block-prace-icon--mobail {
+    display: inline-flex;
+  }
 }
 @media (max-width: 575.98px) {
   .cards-wrapper {
     grid-template-columns: 1fr 1fr;
-    grid-gap: .9rem;
+    grid-gap: 0.9rem;
   }
 }
 
